@@ -113,7 +113,6 @@ var checkForMatch = function () {
 
 cards.sort(function(a, b){return 0.5 - Math.random()});
 
-
 var flipCard = function () {
   cardId = this.getAttribute('dataid');
   if (this !== cardsInPlay[0] && this.src === 'file:///Users/timmy/wdi/projects/Project1/images/adventure_time_logo.png') {
