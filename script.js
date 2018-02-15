@@ -134,3 +134,21 @@ var flipCard = function () {
   }
  };
  
+ var flipBack = function (twoarray) {
+  for(var i = 0 ; i < 2 ; i++) {
+    twoarray[i].setAttribute('src', 'images/adventure_time_logo.png');
+  }
+ };
+ 
+ var createBoard = function () {
+  for (var i = 0; i < cards.length; i++) {
+    var cardElement = document.createElement('img');
+    cardElement.setAttribute('src', 'images/adventure_time_logo.png');
+    cardElement.setAttribute('dataid', i);
+    cardElement.addEventListener('click', flipCard);
+    document.getElementById('gameboard').appendChild(cardElement);
+  }
+ }
+ 
+ createBoard();
+ 
