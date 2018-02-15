@@ -1,103 +1,103 @@
 var cards = [
   {
-    name: 'Finn',
+    name: 'finn',
     duplicate: 'one',
-    cardImage: 'images/Finn.png'
+    cardImage: 'images/finn.png'
   },
   {
-    name: 'Finn',
+    name: 'finn',
     duplicate: 'two',
-    cardImage: 'images/Finn.png'
+    cardImage: 'images/finn.png'
   },
   {
-    name: 'Jake',
+    name: 'jake',
     duplicate: 'three',
-    cardImage: 'images/Jake.png'
+    cardImage: 'images/jake.png'
   },
   {
-    name: 'Jake',
+    name: 'jake',
     duplicate: 'four',
-    cardImage: 'images/Jake.png'
+    cardImage: 'images/jake.png'
   },
   {
-    name: 'PB',
+    name: 'pb',
     duplicate: 'five',
-    cardImage: 'images/PB.png'
+    cardImage: 'images/pb.png'
   },
   {
-    name: 'PB',
+    name: 'pb',
     duplicate: 'six',
-    cardImage: 'images/PB.png'
+    cardImage: 'images/pb.png'
   },
   {
-    name: 'FP',
+    name: 'fp',
     duplicate: 'seven',
-    cardImage: 'images/FP.png'
+    cardImage: 'images/fp.png'
   },
   {
-    name: 'FP',
+    name: 'fp',
     duplicate: 'eight',
-    cardImage: 'images/FP.png'
+    cardImage: 'images/fp.png'
   },
   {
-    name: 'Beemo',
+    name: 'beemo',
     duplicate: 'nine',
-    cardImage: 'images/Beemo.png'
+    cardImage: 'images/beemo.png'
   },
   {
-    name: 'Beemo',
+    name: 'beemo',
     duplicate: 'ten',
-    cardImage: 'images/Beemo.png'
+    cardImage: 'images/beemo.png'
   },
   {
-    name: 'Peppermint,
+    name: 'peppermint',
     duplicate: 'eleven',
-    cardImage: 'images/Peppermint.png'
+    cardImage: 'images/peppermint.png'
   },
   {
-    name: 'Peppermint',
+    name: 'peppermint',
     duplicate: 'twelve',
-    cardImage: 'images/Peppermint.png'
+    cardImage: 'images/peppermint.png'
   },
   {
-    name: 'Gunter',
+    name: 'gunter',
     duplicate: 'thirteen',
-    cardImage: 'images/Gunter.png'
+    cardImage: 'images/gunter.png'
   },
   {
-    name: 'Gunter',
+    name: 'gunter',
     duplicate: 'fourteen',
-    cardImage: 'images/Gunter.png'
+    cardImage: 'images/gunter.png'
   },
   {
-    name: 'Marcelene',
+    name: 'marcelene',
     duplicate: 'fifteen',
-    cardImage: 'images/Marcelene.png'
+    cardImage: 'images/marcelene.png'
   },
   {
-    name: 'Marcelene',
+    name: 'marcelene',
     duplicate: 'sixteen',
-    cardImage: 'images/Marcelene.png'
+    cardImage: 'images/marcelene.png'
   },
   {
-    name: 'Prismo',
+    name: 'prismo',
     duplicate: 'seventeen',
-    cardImage: 'images/Prismo.png'
+    cardImage: 'images/prismo.png'
   },
   {
-    name: 'Prismo',
+    name: 'prismo',
     duplicate: 'eighteen',
-    cardImage: 'images/Prismo.png'
+    cardImage: 'images/prismo.png'
   },
   {
-    name: 'Lady',
+    name: 'lady',
     duplicate: 'nineteen',
-    cardImage: 'images/Lady.png'
+    cardImage: 'images/lady.png'
   },
   {
-    name: 'Lady',
+    name: 'lady',
     duplicate: 'twenty',
-    cardImage: 'images/Lady.png'
+    cardImage: 'images/lady.png'
   }
 ];
 
@@ -110,6 +110,9 @@ var checkForMatch = function () {
    return false;
  }
 };
+
+cards.sort(function(a, b){return 0.5 - Math.random()});
+
 
 var flipCard = function () {
   cardId = this.getAttribute('dataid');
