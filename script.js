@@ -110,3 +110,27 @@ var checkForMatch = function () {
    return false;
  }
 };
+
+var flipCard = function () {
+  cardId = this.getAttribute('dataid');
+  if (this !== cardsInPlay[0] && this.src === 'file:///Users/timmy/wdi/projects/Project1/images/adventure_time_logo.png') {
+    cardsInPlay.push(this);
+    this.setAttribute('src', cards[cardId].cardImage);
+  }
+  if (cardsInPlay.length === 2) {
+    var match = checkForMatch();
+    if (!match) {
+      var twoCards = cardsInPlay;
+      setTimeout(() => {
+        alert("Womp!"); 
+        flipBack(twoCards);
+      }, 500);
+    } else {
+      setTimeout(() => {
+        alert("Match!");
+      }, 500);
+    }
+    cardsInPlay = [];
+  }
+ };
+ 
