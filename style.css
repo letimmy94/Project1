@@ -1,0 +1,42 @@
+h1 {
+    text-align: center;
+    font-family: fantasy;
+	color: gold;
+	letter-spacing: 6px;
+	font-weight: 500;
+	font-size: 50px;
+	text-decoration: underline;
+	text-decoration-color: gold;
+	margin: 0 auto;
+	padding: 15px;
+	border: ridge;
+	border-width: 10px;
+	border-color: lemonchiffon;
+}
+
+header {
+	background-color: lemonchiffon;
+	color: black;
+	padding: 20px 20px;
+}
+
+main {
+	width: 1000px;
+    margin: 0px auto;
+    border-style: groove;
+    border-width: 20px;
+	border-color: lemonchiffon;
+}
+
+img {
+    width: 190px;
+    height: 190px;
+	margin: 0 auto;
+}
+
+img:hover {
+	background-color: lightcoral;
+	border: ridge;
+	border-width: 10px;
+	border-color: aqua;
+}
