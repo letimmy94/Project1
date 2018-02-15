@@ -115,7 +115,7 @@ cards.sort(function(a, b){return 0.5 - Math.random()});
 
 var flipCard = function () {
   cardId = this.getAttribute('dataid');
-  if (this !== cardsInPlay[0] && this.src === 'images/adventure_time_logo1.png') {
+  if (this !== cardsInPlay[0]) {
     cardsInPlay.push(this);
     this.setAttribute('src', cards[cardId].cardImage);
   }
