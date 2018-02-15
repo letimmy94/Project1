@@ -100,56 +100,13 @@ var cards = [
     cardImage: 'images/lady.png'
   }
 ];
-cards.sort(function(a, b){return 0.5 - Math.random()});
 
 var cardsInPlay = [];
 
 var checkForMatch = function () {
-  if (cardsInPlay[0].src === cardsInPlay[1].src) {
-    return true;
-  } else {
-    return false;
-  }
+ if (cardsInPlay[0].src === cardsInPlay[1].src) {
+   return true;
+ } else {
+   return false;
+ }
 };
-
-var flipCard = function () {
-  cardId = this.getAttribute('dataid');
-  console.log(this);
-  if (this !== cardsInPlay[0] && this.src === 'file:///Users/timmy/wdi/projects/Project1/images/adventure_time_logo.png') {
-    cardsInPlay.push(this);
-    this.setAttribute('src', cards[cardId].cardImage);
-  }
-  if (cardsInPlay.length === 2) {
-    var match = checkForMatch();
-    if (!match) {
-      var twoCards = cardsInPlay;
-      setTimeout(() => {
-        alert("Womp!");  
-        flipBack(twoCards);
-      }, 500);
-    } else {
-      setTimeout(() => {
-        alert("Match!");
-      }, 500);
-    }
-    cardsInPlay = [];
-  } 
-};
-
-var flipBack = function (twoarray) {
-  for(var i = 0 ; i < 2 ; i++) {
-    twoarray[i].setAttribute('src', 'images/adventure_time_logo.png');
-  }
-};
-
-var createBoard = function () {
-  for (var i = 0; i < cards.length; i++) {
-    var cardElement = document.createElement('img');
-    cardElement.setAttribute('src', 'images/adventure_time_logo.png');
-    cardElement.setAttribute('dataid', i);
-    cardElement.addEventListener('click', flipCard);
-    document.getElementById('gameboard').appendChild(cardElement);
-  }
-}
-
-createBoard();
