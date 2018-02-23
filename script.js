@@ -1,3 +1,6 @@
+// You might consider putting all your data (cards array) in a separate .js file
+// to clean up the look of this file and not have to scroll all the way down to view the functional JS.
+
 var cards = [
   {
     name: 'finn',
@@ -101,6 +104,14 @@ var cards = [
   }
 ];
 
+// You'll want to wrap all of the below JavaScript in an immediately-invoked function expression (IIFE) - e.g.:
+// (function () {
+//   // All of your code goes here
+// })()
+
+// Great use of semantic function names
+// Adding inline comments can help you further represent what each section of code does
+
 var cardsInPlay = [];
 
 var checkForMatch = function () {
@@ -113,8 +124,9 @@ var checkForMatch = function () {
 
 cards.sort(function(a, b){return 0.5 - Math.random()});
 
+// I would suggest separating out some of the below code into other functions that you call in flipCard:
 var flipCard = function () {
-  cardId = this.getAttribute('dataid');
+  cardId = this.getAttribute('data-id');
   if (this !== cardsInPlay[0]) {
     cardsInPlay.push(this);
     this.setAttribute('src', cards[cardId].cardImage);
@@ -123,6 +135,7 @@ var flipCard = function () {
     var match = checkForMatch();
     if (!match) {
       var twoCards = cardsInPlay;
+      // Do you need to set twoCards to cardsInPlay, or can you just use cardsInPlay in flipBack function below?
       setTimeout(() => {
         alert("Womp!"); 
         flipBack(twoCards);
@@ -136,6 +149,7 @@ var flipCard = function () {
   }
  };
  
+ // Below, twoarray should be camelCase
  var flipBack = function (twoarray) {
   for(var i = 0 ; i < 2 ; i++) {
     twoarray[i].setAttribute('src', 'images/adventure_time_logo1.png');
@@ -146,9 +160,11 @@ var flipCard = function () {
   for (var i = 0; i < cards.length; i++) {
     var cardElement = document.createElement('img');
     cardElement.setAttribute('src', 'images/adventure_time_logo1.png');
-    cardElement.setAttribute('dataid', i);
+    cardElement.setAttribute('data-id', i);
     cardElement.addEventListener('click', flipCard);
     document.getElementById('gameboard').appendChild(cardElement);
+    // ^^ May want to define a variable for document.getElementById('gameboard') above,
+    // and refer to it here to save it as a semantic variable, thus making it clearer what you are appending child to.
   }
  }
  
