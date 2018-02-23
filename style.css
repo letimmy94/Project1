@@ -1,6 +1,7 @@
 h1 {
     text-align: center;
-    font-family: fantasy;
+	font-family: fantasy;
+	/* ^ It's good practice to list a back-up font category, like 'sans serif', in case a browser doesn't have fantasy */
 	color: gold;
 	letter-spacing: 6px;
 	font-weight: 500;
